@@ -1,6 +1,7 @@
 from sklearn import tree
 from sklearn.metrics import accuracy_score
 import numpy as np
+from evaluation import plot_confusion_matrix, plot_roc_curve
 
 
 def load_dataset():
@@ -42,3 +43,7 @@ if __name__ == "__main__":
 
     accuracy = 100 * accuracy_score(y_test, predictions)
     print(f"✅ Model accuracy on test data: {accuracy:.2f}%")
+
+    plot_confusion_matrix(model, X_test, y_test)
+    plot_roc_curve(model, X_test, y_test)
+    print("📊 Evaluation plots generated")
