@@ -15,7 +15,7 @@ To get started, you should first clone this repository by running the
 following command from a `UNIX` terminal. 
 
 ```
-git clone https://github.com/npapernot/phishing-detection
+git clone https://github.com/Harshith743/phishing-ml-detector
 ```
 
 This will download the code that trains the phishing detector, as well
@@ -53,7 +53,7 @@ was downloaded on your machine when you cloned this repository.
 The dataset was collected by analyzing a collection of `2456` websites 
 among which some were used for phishing and others not. For each website 
 included in the dataset, `30` attributes are given. You can find a list
-[here](https://github.com/npapernot/phishing-detection/blob/master/features.md).
+[here](https://github.com/Harshith743/phishing-ml-detector/blob/master/features.md).
 The list includes for instance the URL length, whether the website
 uses pop-up windows or Iframes, or how old the domain registration is.
 
@@ -63,7 +63,7 @@ website and by `1` if it is a website used for phishing.
 ## Training the decision tree to detect phishing website
 
 You can find the code that trains the decision tree in the 
-[`decision_tree.py`](https://github.com/npapernot/phishing-detection/blob/master/decision_tree.py) 
+[`decision_tree.py`](https://github.com/Harshith743/phishing-ml-detector/blob/master/decision_tree.py) 
 file. To run the code, simply execute it in a terminal:
 
 ```
@@ -88,13 +88,13 @@ The accuracy of your decision tree on testing data is: 0.906129210381
 ```
 
 To understand how this was done, you can read the line by line comments 
-in the [`decision_tree.py`](https://github.com/npapernot/phishing-detection/blob/master/decision_tree.py) file.
+in the [`decision_tree.py`](https://github.com/Harshith743/phishing-ml-detector/blob/master/decision_tree.py) file.
 
 ## What next?
 
 You can try improving the accuracy of this simple classifier by changing
 some of the default parameter values for the model. This is done by
-modifying [this line](https://github.com/npapernot/phishing-detection/blob/master/decision_tree.py#L48) 
+modifying [this line](https://github.com/Harshith743/phishing-ml-detector/blob/master/decision_tree.py#L48) 
 of `decision_tree.py`. To learn more about the 
 parameters that you can define when calling `DecisionTreeClassifier()`,
 take a look at the `scikit-learn` 
@@ -103,10 +103,10 @@ take a look at the `scikit-learn`
 You can also try different models like 
 [Support Vector Machines](http://scikit-learn.org/stable/modules/svm.html) 
 or [Neural Networks](http://scikit-learn.org/dev/modules/neural_networks_supervised.html). 
-For instance, in [this file](https://github.com/npapernot/phishing-detection/blob/master/logistic_regression.py), the machine learning model is now a logistic
+For instance, in [this file](https://github.com/Harshith743/phishing-ml-detector/blob/master/logistic_regression.py), the machine learning model is now a logistic
 regression, but it performs worse than the decision tree. 
 
 ## Questions or suggestions
 
 If you have any questions or suggestions, feel free to send me an email
-at [`nicolas@papernot.fr`](mailto:nicolas@papernot.fr).
+at [`harshith.reddy743@gmail.com`](mailto:harshith.reddy743@gmail.com).
