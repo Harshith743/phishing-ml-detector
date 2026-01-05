@@ -1,31 +1,21 @@
-from sklearn.linear_model import LogisticRegression as lr
+from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
-
-import numpy as np
-
-from decision_tree import load_data
+from decision_tree import load_dataset
 
 
-if __name__ == '__main__':
-    print "Tutorial: Training a logistic regression to detect phishing websites"
+if __name__ == "__main__":
+    print("🔐 Phishing Website Detection using Logistic Regression")
 
-    # Load the training data
-    train_inputs, train_outputs, test_inputs, test_outputs = load_data()
-    print "Training data loaded."
+    X_train, y_train, X_test, y_test = load_dataset()
+    print("📂 Dataset loaded successfully")
 
-    # Create a logistic regression classifier model using scikit-learn
-    classifier = lr()
-    print "Logistic regression classifier created."
+    model = LogisticRegression(max_iter=200)
+    print("📈 Logistic Regression model created")
 
-    print "Beginning model training."
-    # Train the logistic regression classifier
-    classifier.fit(train_inputs, train_outputs)
-    print "Model training completed."
+    model.fit(X_train, y_train)
+    print("🤖 Model training complete")
 
-    # Use the trained classifier to make predictions on the test data
-    predictions = classifier.predict(test_inputs)
-    print "Predictions on testing data computed."
+    predictions = model.predict(X_test)
 
-    # Print the accuracy (percentage of phishing websites correctly predicted)
-    accuracy = 100.0 * accuracy_score(test_outputs, predictions)
-    print "The accuracy of your logistic regression on testing data is: " + str(accuracy)
+    accuracy = 100 * accuracy_score(y_test, predictions)
+    print(f"✅ Model accuracy on test data: {accuracy:.2f}%")
